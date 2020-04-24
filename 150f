@@ -1,0 +1,23 @@
+[33mcommit 9cf03049615c70b363af8d86f0e00c95cf743b9d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Nabendu Bikash Binda <eng.nabendu@gmail.com>
+Date:   Mon Apr 20 12:01:15 2020 +0600
+
+    add a patient database folder and declear file variable with path
+
+[33mcommit de0697408bd870863e00b6da95196fb2a9934414[m
+Author: Nabendu Bikash Binda <eng.nabendu@gmail.com>
+Date:   Mon Apr 20 09:31:55 2020 +0600
+
+    add three constructor in prescription.java class
+
+[33mcommit 1a0fd0425c95769eaaa5c2471721f75c5bef218b[m
+Author: Nabendu Bikash Binda <eng.nabendu@gmail.com>
+Date:   Mon Apr 20 08:21:12 2020 +0600
+
+    Added boolean flag for switching system and add loop in doctor main class
+
+[33mcommit 9bf759e31a7c3c09700efcc626df726131df150f[m
+Author: Nabendu Bikash Binda <eng.nabendu@gmail.com>
+Date:   Sat Apr 18 23:02:46 2020 +0600
+
+    create three class and declear main veriable with getters and setters
