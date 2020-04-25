@@ -1,15 +1,18 @@
 package writePrescription;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+
 import java.util.Scanner;
 
 public class PatientIdControl {
 	private Scanner idScan;
 	private int patientIdSrorer;
+	
+	public PatientIdControl() {
+		super();
+		patientIdSrorer = 0000;
+	}
+
 	private File doctorsLastPatientId = new File("F:/softwareDevelopment/Doctor-Assistant/PatientDatabase/idCallBack.id");
 
 //-----------this method for store id---------------in idCallback.id file--------------------

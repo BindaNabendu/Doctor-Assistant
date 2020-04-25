@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Doctor {
 	private static Scanner systemScanner=new Scanner(System.in);
-	private static Prescription doctorPrescription=new Prescription();
+	private static Prescription doctorPrescript=new Prescription();
+
  public static void main(String[] args) {
 	 int takeInstruction;
 	 
@@ -37,13 +38,13 @@ public class Doctor {
 				doctorRecommandedTest=systemScanner.nextLine();
 				
 				//have to call doctors constructor after taking all information
-				doctorPrescription=new Prescription(tempPatientIdReceiver, tempPatientNameString, tempAgeReceiver, rxString,doctorsNotes,doctorRecommandedTest);
+				doctorPrescript=new Prescription(tempPatientIdReceiver, tempPatientNameString, tempAgeReceiver, rxString,doctorsNotes,doctorRecommandedTest);
 				
 				
 			} else if (takeInstruction == 2) {
 				// TODO find patient details
 				//--------------------*********Temporarily use this method ********----------------------------
-				doctorPrescription.showAllDetails();
+				doctorPrescript.showAllDetails();
 			} else if (takeInstruction == 3) {
 				// TODO see of appointment
 				
@@ -61,7 +62,11 @@ public class Doctor {
 	 systemScanner.close();
  }
  private static int patientIdGenerator() {
-	 doctorPrescription.patientId+=1;
-	 return doctorPrescription.patientId;
+	 PatientIdControl idSeter=new PatientIdControl();
+	 
+	 doctorPrescript.patientId=idSeter.getLastPatientId();
+	 doctorPrescript.patientId+=1;
+	 return doctorPrescript.patientId;
+	 idSeter.setLastPatientId(doctorPrescript.patientId);
  }
 }
