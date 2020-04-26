@@ -66,7 +66,7 @@ public class Doctor {
 	 
 	 doctorPrescript.patientId=idSeter.getLastPatientId();
 	 doctorPrescript.patientId+=1;
-	 return doctorPrescript.patientId;
 	 idSeter.setLastPatientId(doctorPrescript.patientId);
+	 return doctorPrescript.patientId;
  }
 }
