@@ -13,12 +13,11 @@ public class PatientIdControl {
 		patientIdSrorer = 0000;
 	}
 
-	private File doctorsLastPatientId = new File("F:/softwareDevelopment/Doctor-Assistant/PatientDatabase/idCallBack.id");
+	public File doctorsLastPatientId = new File("F:/softwareDevelopment/Doctor-Assistant/PatientDatabase/idCallBack.id");
 
 //-----------this method for store id---------------in idCallback.id file--------------------
+	public FileWriter idWriter;
 	public void setLastPatientId(int patientId) {
-		
-		FileWriter idWriter;
 		try {
 			idWriter = new FileWriter(doctorsLastPatientId);
 			idWriter.write(patientId);
@@ -29,8 +28,8 @@ public class PatientIdControl {
 	}
 	
 	//--------this method for read id---------from idCallBack.id file---------------------
+	public FileReader idReader;
 	public int getLastPatientId() {
-		FileReader idReader;
 		try {
 			idReader=new FileReader(doctorsLastPatientId);
 			idScan=new Scanner(idReader);

@@ -1,10 +1,12 @@
 package writePrescription;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Doctor {
 	private static Scanner systemScanner=new Scanner(System.in);
 	private static Prescription doctorPrescript=new Prescription();
+	private static PatientIdControl idSeter=new PatientIdControl();
 
  public static void main(String[] args) {
 	 int takeInstruction;
@@ -57,13 +59,17 @@ public class Doctor {
 			takeInstruction=systemScanner.nextInt();
 		}
 		ScannerClosed();
+		try {
+			idSeter.idReader.close();
+			idSeter.idWriter.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 }
  public static void ScannerClosed() {
 	 systemScanner.close();
  }
  private static int patientIdGenerator() {
-	 PatientIdControl idSeter=new PatientIdControl();
-	 
 	 doctorPrescript.patientId=idSeter.getLastPatientId();
 	 doctorPrescript.patientId+=1;
 	 idSeter.setLastPatientId(doctorPrescript.patientId);
